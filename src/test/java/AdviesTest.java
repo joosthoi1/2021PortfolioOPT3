@@ -11,6 +11,7 @@ public class AdviesTest {
         assertFalse(advies.magAdviesKrijgen(true, "HCRB", false));
         assertTrue(advies.magAdviesKrijgen(false,"HCRB",true));
     }
+    @Test
     void krijgAdviesTest() {
         Advies advies = new Advies(new String[] {"GMHC"});
         assertEquals(advies.geefSuggestie(0,0,"Pasing",0).getCategorie(), 1);

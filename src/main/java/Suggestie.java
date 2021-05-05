@@ -4,4 +4,8 @@ public class Suggestie {
     public Suggestie(int categorie) {
         this.categorie = categorie;
     }
+
+    public int getCategorie() {
+        return categorie;
+    }
 }
