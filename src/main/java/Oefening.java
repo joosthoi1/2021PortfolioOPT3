@@ -5,6 +5,6 @@ public class Oefening {
     }
 
     public int getOefeningTijd() {
-        return 0;
+        return this.oefeningTijd;
     }
 }
