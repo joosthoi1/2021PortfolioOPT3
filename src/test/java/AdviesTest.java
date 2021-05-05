@@ -11,4 +11,13 @@ public class AdviesTest {
         assertFalse(advies.magAdviesKrijgen(true, "HCRB", false));
         assertTrue(advies.magAdviesKrijgen(false,"HCRB",true));
     }
+    void krijgAdviesTest() {
+        Advies advies = new Advies(new String[] {"GMHC"});
+        assertEquals(advies.geefSuggestie(0,0,"Pasing",0).getCategorie(), 1);
+        assertEquals(advies.geefSuggestie(0,1,"Afronding",1).getCategorie(), 3);
+        assertEquals(advies.geefSuggestie(1,0,"Afronding",0).getCategorie(), 2);
+        assertEquals(advies.geefSuggestie(1,1,"Pasing",1).getCategorie(), 4);
+        assertEquals(advies.geefSuggestie(2,0,"Pasing",1).getCategorie(), 4);
+        assertEquals(advies.geefSuggestie(2,1,"Afronding",0).getCategorie(), 4);
+    }
 }
