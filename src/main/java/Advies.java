@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Advies {
     private String[] geveriefeerderClubs;
 
@@ -6,7 +9,9 @@ public class Advies {
     }
 
     public boolean magAdviesKrijgen (boolean clubAccount, String club, boolean adminAccount) {
-        return true;
+        boolean isVerified = Arrays.asList(this.geveriefeerderClubs).contains(club);
+
+        return (clubAccount && isVerified) || adminAccount;
     }
 
     /**
