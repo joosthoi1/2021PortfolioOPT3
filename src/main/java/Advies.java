@@ -23,6 +23,6 @@ public class Advies {
      * @param geslacht     0 = male, 1 = female
      */
     public Suggestie geefSuggestie (int teamLeeftijd, int klasse, String type, int geslacht) {
-        return new Suggestie(0);
+        return new Suggestie(1 + teamLeeftijd + klasse + geslacht);
     }
 }
