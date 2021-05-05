@@ -5,7 +5,7 @@ public class Advies {
         this.geveriefeerderClubs = geveriefeerderClubs;
     }
 
-    public boolean magAdviesKrijgen (boolean clubAccount, boolean adminAccount) {
+    public boolean magAdviesKrijgen (boolean clubAccount, String club, boolean adminAccount) {
         return true;
     }
 
