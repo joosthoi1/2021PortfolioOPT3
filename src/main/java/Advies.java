@@ -8,4 +8,6 @@ public class Advies {
     public boolean magAdviesKrijgen (boolean clubAccount, boolean adminAccount) {
         return true;
     }
+
+
 }
