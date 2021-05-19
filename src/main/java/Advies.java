@@ -1,15 +1,25 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Advies {
-    private String[] geveriefeerderClubs;
+public final class Advies {
+    private ArrayList<String> geveriefeerderClubs;
+    private static Advies instance;
 
-    public Advies(String[] geveriefeerderClubs) {
-        this.geveriefeerderClubs = geveriefeerderClubs;
+    public Advies() {
+        this.geveriefeerderClubs = new ArrayList<String>();
     }
 
+    public static Advies getInstance() {
+        if (instance == null) {
+            instance = new Advies();
+        }
+        return instance;
+    }
+    public void addClub (String club) {
+        this.geveriefeerderClubs.add(club);
+    }
     public boolean magAdviesKrijgen (boolean clubAccount, String club, boolean adminAccount) {
-        boolean isVerified = Arrays.asList(this.geveriefeerderClubs).contains(club);
+        boolean isVerified = this.geveriefeerderClubs.contains(club);
 
         return (clubAccount && isVerified) || adminAccount;
     }
