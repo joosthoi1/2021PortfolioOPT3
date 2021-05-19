@@ -5,7 +5,7 @@ public final class Advies {
     private ArrayList<String> geveriefeerderClubs;
     private static Advies instance;
 
-    public Advies() {
+    private Advies() {
         this.geveriefeerderClubs = new ArrayList<String>();
     }
 
