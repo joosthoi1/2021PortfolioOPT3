@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Advies {
-    private String[] geveriefeerderClubs;
+public final class Advies {
+    private ArrayList<String> geveriefeerderClubs; 
+    private static Advies instance;
+
 
     public Advies(String[] geveriefeerderClubs) {
         this.geveriefeerderClubs = geveriefeerderClubs;
