@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public final class Advies {
-    private ArrayList<String> geveriefeerderClubs;
+    private ArrayList<String> geveriefeerderClubs; 
     private static Advies instance;
 
     public Advies() {
