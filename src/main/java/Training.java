@@ -40,13 +40,20 @@ public class Training {
         scanner.nextLine();
 
         Suggestie suggestie = Advies.getInstance().geefSuggestie(leeftijd,klasse,type,geslacht);
+        System.out.print("Suggestie: Een oefening met categorie ");
         System.out.println(suggestie.getCategorie());
+        scanner.nextLine();
     }
 
     public void displayTrainingOefeningen() {
         for (Oefening oefening:
              this.oefeningen) {
             System.out.println(oefening.displayDetails());
+            System.out.println();
         }
+    }
+
+    public void addOefening(Oefening oefening){
+        this.oefeningen.add(oefening);
     }
 }
