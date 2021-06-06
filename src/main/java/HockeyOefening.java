@@ -1,7 +1,7 @@
 public class HockeyOefening extends Oefening {
     private String handeling;
-    public HockeyOefening(int oefeningTijd, String naam, String handeling) {
-        super(oefeningTijd,naam);
+    public HockeyOefening(int oefeningTijd, String naam, int categorie, String handeling) {
+        super(oefeningTijd,naam, categorie);
         this.handeling = handeling;
     }
 

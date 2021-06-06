@@ -1,7 +1,7 @@
 public class ConditieOefening extends Oefening{
     private int gemmideldeVerbrandeCalorien;
-    public ConditieOefening(int oefeningTijd, String naam, int gemmideldeVerbrandeCalorien) {
-        super(oefeningTijd, naam);
+    public ConditieOefening(int oefeningTijd, String naam, int categorie, int gemmideldeVerbrandeCalorien) {
+        super(oefeningTijd, naam, categorie);
         this.gemmideldeVerbrandeCalorien = gemmideldeVerbrandeCalorien;
     }
 

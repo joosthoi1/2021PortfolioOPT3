@@ -23,6 +23,12 @@ public final class Advies {
 
         return (clubAccount && isVerified) || adminAccount;
     }
+    public boolean magAdviesKrijgen (Trainer account) {
+        boolean clubAccount = account.getClub() != null;
+        String club = account.getClub();
+        boolean adminAccount = account.getAdminStatus();
+        return magAdviesKrijgen(clubAccount,club,adminAccount);
+    }
 
     /**
      * Returns a new Suggestie object of a certain category

@@ -2,6 +2,9 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        Trainer trainer = new Trainer("joost", "GMHC", false);
+        trainer.makeTraining();
+        /*
         Training training = new Training(new ArrayList<Oefening>());
 
         training.addOefening(new ConditieOefening(6, "shuttles", 100));
@@ -24,5 +27,7 @@ public class Main {
 
 
         training.displayTrainingOefeningen();
+
+         */
     }
 }

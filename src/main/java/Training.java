@@ -24,26 +24,7 @@ public class Training {
         return "goed";
     }
 
-    public void krijgAdvies() {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Team leeftijd?");
-        int leeftijd = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("Welke klasse speelt het team?");
-        int klasse = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("Wat is het type suggestie?");
-        String type = scanner.nextLine();
-        System.out.println("Is het een mannen of vrouwen team?");
-        int geslacht = scanner.nextInt();
-        scanner.nextLine();
-
-        Suggestie suggestie = Advies.getInstance().geefSuggestie(leeftijd,klasse,type,geslacht);
-        System.out.print("Suggestie: Een oefening met categorie ");
-        System.out.println(suggestie.getCategorie());
-        scanner.nextLine();
-    }
 
     public void displayTrainingOefeningen() {
         for (Oefening oefening:
