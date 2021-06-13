@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.logging.ConsoleHandler;
 
 public class Training {
     private ArrayList<Oefening> oefeningen;
@@ -20,5 +22,19 @@ public class Training {
             return "kort";
         }
         return "goed";
+    }
+
+
+
+    public void displayTrainingOefeningen() {
+        for (Oefening oefening:
+             this.oefeningen) {
+            System.out.println(oefening.displayDetails());
+            System.out.println();
+        }
+    }
+
+    public void addOefening(Oefening oefening){
+        this.oefeningen.add(oefening);
     }
 }
