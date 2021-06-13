@@ -1,5 +1,6 @@
+package Training;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public final class Advies {
     private ArrayList<String> geveriefeerderClubs;
@@ -31,7 +32,7 @@ public final class Advies {
     }
 
     /**
-     * Returns a new Suggestie object of a certain category
+     * Returns a new Training.Suggestie object of a certain category
      *
      * @param teamLeeftijd 0 = A leeftijd, 1 = B leeftijd
      * @param klasse       0 = subtop, 1 = 1e klasse, 2 = 2e klasse

@@ -1,4 +1,8 @@
-import java.lang.reflect.Array;
+package Training;
+
+import Oefening.Oefening;
+import Oefening.OefeningStore;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -22,7 +26,8 @@ public class Trainer {
                     "1 Voeg oefening toe aan training\n" +
                     "2 Laat voorlopige training zien\n" +
                     "3 Laat suggestie oefeningen zien\n" +
-                    "4 exit\n" +
+                    "4 Geef weer hoe een oefening werkt\n" +
+                    "5 exit\n" +
                     "Maak uw keuze\n"
             );
             int keuze = scanner.nextInt();
@@ -38,13 +43,25 @@ public class Trainer {
                     this.krijgAdvies();
                     break;
                 case 4:
+                    this.oefeningVoor();
+                    break;
+                case 5:
                     running = false;
                     break;
             }
         }
     }
+    private void oefeningVoor() {
+        Oefening oefening = OefeningStore.selectMenu(this.training.getOefeningen());
+        if (oefening != null) {
+            oefening.doeOefeningVoor();
+        }
+        else {
+            System.out.println("Geen oefening geselecteerd");
+        }
+    }
     private void addOefening() {
-        Oefening oefening = OefeningStore.selectMenu();
+        Oefening oefening = OefeningStore.selectMenu(OefeningStore.getOefeningen());
         if (oefening != null) {
             this.training.addOefening(oefening);
         }
@@ -73,9 +90,9 @@ public class Trainer {
         scanner.nextLine();
 
         Suggestie suggestie = Advies.getInstance().geefSuggestie(leeftijd,klasse,type,geslacht);
-        System.out.print("Suggestie: Een oefening met categorie ");
+        System.out.print("Training.Suggestie: Een oefening met categorie ");
         System.out.println(suggestie.getCategorie());
-        
+
         ArrayList<Oefening> suggestieOefeningen = suggestie.getOefening();
         for (Oefening suggestieOefening:
              suggestieOefeningen) {

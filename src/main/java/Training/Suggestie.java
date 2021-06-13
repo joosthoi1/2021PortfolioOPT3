@@ -1,3 +1,8 @@
+package Training;
+
+import Oefening.Oefening;
+import Oefening.OefeningStore;
+
 import java.util.ArrayList;
 
 public class Suggestie {

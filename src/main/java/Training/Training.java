@@ -1,6 +1,8 @@
+package Training;
+
+import Oefening.Oefening;
+
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.logging.ConsoleHandler;
 
 public class Training {
     private ArrayList<Oefening> oefeningen;
@@ -24,7 +26,9 @@ public class Training {
         return "goed";
     }
 
-
+    public ArrayList<Oefening> getOefeningen() {
+        return oefeningen;
+    }
 
     public void displayTrainingOefeningen() {
         for (Oefening oefening:
