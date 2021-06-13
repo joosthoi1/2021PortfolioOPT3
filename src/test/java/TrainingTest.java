@@ -1,8 +1,11 @@
+import Oefening.ConditieOefening;
+import Oefening.HockeyOefening;
+import Oefening.Oefening;
+import Training.Training;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.*;
 

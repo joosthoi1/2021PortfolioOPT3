@@ -1,3 +1,5 @@
+package Oefening;
+
 public abstract class Oefening {
     protected int oefeningTijd;
     protected String naam;
@@ -11,6 +13,14 @@ public abstract class Oefening {
     public int getOefeningTijd() {
         return this.oefeningTijd;
     }
+
+    public void doeOefeningVoor() {
+        System.out.println(this.voorbereiding());
+        System.out.println(this.uitleg());
+    }
+
+    abstract String voorbereiding();
+    abstract String uitleg();
 
     public String getNaam() {
         return naam;

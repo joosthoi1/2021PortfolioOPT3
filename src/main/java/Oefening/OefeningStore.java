@@ -1,3 +1,5 @@
+package Oefening;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -16,8 +18,8 @@ public class OefeningStore {
         }
         return OefeningStore.oefeningen;
     }
-    public static Oefening selectMenu() {
-        ArrayList<Oefening> x = OefeningStore.getOefeningen();
+    public static Oefening selectMenu(ArrayList<Oefening> x) {
+
 
         Scanner scanner = new Scanner(System.in);
         int i;
