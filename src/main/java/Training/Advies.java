@@ -19,16 +19,13 @@ public final class Advies {
     public void addClub (String club) {
         this.geveriefeerderClubs.add(club);
     }
-    public boolean magAdviesKrijgen (boolean clubAccount, String club, boolean adminAccount) {
-        boolean isVerified = this.geveriefeerderClubs.contains(club);
-
-        return (clubAccount && isVerified) || adminAccount;
-    }
     public boolean magAdviesKrijgen (Trainer account) {
         boolean clubAccount = account.getClub() != null;
         String club = account.getClub();
         boolean adminAccount = account.getAdminStatus();
-        return magAdviesKrijgen(clubAccount,club,adminAccount);
+        boolean isVerified = this.geveriefeerderClubs.contains(club);
+
+        return (clubAccount && isVerified) || adminAccount;
     }
 
     /**
