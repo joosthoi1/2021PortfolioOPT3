@@ -1,4 +1,5 @@
 import Training.Advies;
+import Training.Trainer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions.*;
@@ -9,10 +10,11 @@ public class AdviesTest {
         Advies advies = Advies.getInstance();
         advies.addClub("GMHC");
 
-        Assertions.assertTrue(advies.magAdviesKrijgen(true, "GMHC", false));
-        Assertions.assertFalse(advies.magAdviesKrijgen(false, "GMHC", false));
-        Assertions.assertFalse(advies.magAdviesKrijgen(true, "HCRB", false));
-        Assertions.assertTrue(advies.magAdviesKrijgen(false,"HCRB",true));
+        ;
+        Assertions.assertTrue(advies.magAdviesKrijgen(new Trainer("joost", "GMHC",false)));
+        Assertions.assertFalse(advies.magAdviesKrijgen(new Trainer("joost", null,false)));
+        Assertions.assertFalse(advies.magAdviesKrijgen(new Trainer("joost", "HCRB",false)));
+        Assertions.assertTrue(advies.magAdviesKrijgen(new Trainer("joost", null,true)));
     }
     @Test
     void krijgAdviesTest() {
